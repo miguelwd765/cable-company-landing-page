@@ -1,4 +1,92 @@
+:root {
+  --font-accent: "Poppins", sans-serif;
+  --font-heading: "Roboto", sans-serif;
+
+  --bg-navy-dark: #2e323f;
+  --bg-navy-med: #3b4050;
+  --bg-navy-light: #6f737f;
+
+  --color-light-grey: #c9c9c9;
+
+  --transition: all 0.3s linear;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 * {
-  --font-accent: font-family: "Ubuntu", sans-serif;
-  --font--heading: font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-accent);
+  font-size: 21px;
+  background-color: var(--color-light-grey);
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+#home {
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.nav {
+  background-color: var(--bg-navy-med);
+  padding: 0.25rem 0.75rem;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.7rem;
+  color: #fff;
+}
+
+.nav-toggle {
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.7rem;
+}
+
+.title {
+  font-family: var(--font-heading);
+}
+
+.links-container {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.nav-links {
+  display: block;
+  padding: 0.85rem 0;
+}
+
+@media screen and (max-width: 328px) {
+  .nav-toggle,
+  .logo {
+    font-size: 1.45rem;
+  }
 }
