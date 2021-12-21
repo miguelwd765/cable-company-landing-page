@@ -11,3 +11,15 @@ navToggle.addEventListener("click", function (e) {
     linksContainer.style.height = 0;
   }
 });
+
+const nav = document.querySelector(".nav");
+const navHeight = nav.getBoundingClientRect().height;
+
+window.addEventListener("scroll", function (e) {
+  const scrollHeight = window.pageYOffset;
+  if (scrollHeight > navHeight) {
+    nav.classList.add("fixed-nav");
+  } else {
+    nav.classList.remove("fixed-nav");
+  }
+});

@@ -60,6 +60,15 @@ article {
   padding: 0.25rem 0.75rem;
 }
 
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg-navy-med);
+  z-index: 1000;
+}
+
 .nav-header {
   display: flex;
   justify-content: space-between;
@@ -119,6 +128,15 @@ article {
     padding: 0;
   }
 
+  .fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-off-white);
+    z-index: 1000;
+  }
+
   .nav-center {
     display: flex;
     justify-content: space-between;
@@ -140,8 +158,17 @@ article {
   }
 
   .nav-links {
-    margin: 0 0.75rem;
+    margin: 0 0.35rem;
     display: block;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 968px) {
+  .nav-links {
+    margin: 0 0.75rem;
+    font-size: 1.25rem;
   }
 }
 
