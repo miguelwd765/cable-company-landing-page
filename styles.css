@@ -43,6 +43,10 @@ img {
   display: block;
 }
 
+article {
+  margin: 2rem 0;
+}
+
 #home {
   min-height: 100vh;
   margin: 0 auto;
@@ -195,3 +199,32 @@ img {
 }
 
 /* ************** END OF HERO *************** */
+
+/* ************** PACKAGES *************** */
+.pack-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.pack-column {
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.pack-column h3 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+@media screen and (min-width: 800px) {
+  .pack-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .pack-column {
+    width: 30%;
+    border: 2px solid red;
+  }
+}
+/* ************** END OF PACKAGES *************** */
