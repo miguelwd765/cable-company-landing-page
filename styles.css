@@ -44,7 +44,9 @@ img {
 }
 
 article {
-  margin: 2rem 0;
+  /* margin: 2rem 0; */
+  padding: 2rem 0;
+  text-align: center;
 }
 
 #home {
@@ -168,7 +170,7 @@ article {
 @media screen and (min-width: 968px) {
   .nav-links {
     margin: 0 0.75rem;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
   }
 }
 
@@ -227,37 +229,51 @@ article {
 
 /* ************** END OF HERO *************** */
 
-/* ************** PACKAGES *************** */
-.pack-container {
+/* ************** ARTICLES *************** */
+#packages {
+  background-color: var(--color-light-grey);
+}
+
+.article-header {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.article-container {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-.pack-column {
+.article-column {
   width: 90%;
   margin: 1rem auto;
 }
 
-.pack-column h3 {
+.article-column h3 {
   font-size: 2rem;
 }
 
-.pack-column i {
+.article-column i {
   font-size: 2rem;
 }
 
-.pack-column p {
+.article-column p {
   margin-top: 1rem;
 }
 @media screen and (min-width: 800px) {
-  .pack-container {
+  .article-container {
     flex-direction: row;
     align-items: flex-start;
   }
 
-  .pack-column {
+  .article-column {
     width: 30%;
   }
+
+  #phone .article-column {
+    width: 45%;
+  }
 }
-/* ************** END OF PACKAGES *************** */
+
+/* ************** END OF ARTICLES *************** */
