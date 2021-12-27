@@ -230,7 +230,8 @@ article {
 /* ************** END OF HERO *************** */
 
 /* ************** ARTICLES *************** */
-#packages {
+#packages,
+#search {
   background-color: var(--color-light-grey);
 }
 
