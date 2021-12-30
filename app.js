@@ -23,3 +23,32 @@ window.addEventListener("scroll", function (e) {
     nav.classList.remove("fixed-nav");
   }
 });
+
+const navLinks = document.querySelectorAll(".nav-links");
+
+for (let link of navLinks) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const navHeight = nav.getBoundingClientRect().height;
+    const containerHeight = linksContainer.getBoundingClientRect().height;
+    const id = e.currentTarget.getAttribute("href").slice(1);
+    const element = document.getElementById(id);
+    let position = element.offsetTop - navHeight;
+    const isNavFixed = nav.classList.contains("fixed-nav");
+    console.log(isNavFixed);
+    console.log(containerHeight);
+
+    if (!isNavFixed) {
+      position = position - navHeight;
+    }
+
+    if (containerHeight > 58) {
+      position = position + containerHeight;
+    }
+    window.scrollTo({
+      left: 0,
+      top: position,
+    });
+    linksContainer.style.height = 0;
+  });
+}
