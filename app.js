@@ -52,3 +52,47 @@ for (let link of navLinks) {
     linksContainer.style.height = 0;
   });
 }
+
+const searchForm = document.querySelector(".search-form");
+const clearBtn = document.querySelector(".clear-btn");
+const input = document.querySelector(".search-input");
+const showContainer = document.querySelector(".show-container");
+
+searchForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  fetchApi();
+});
+
+clearBtn.addEventListener("click", function (e) {
+  input.value = "";
+});
+
+const fetchApi = async () => {
+  const userInput = input.value;
+  const config = { params: { q: userInput } };
+  const res = await axios.get("https://api.tvmaze.com/search/shows", config);
+  displayShow(res.data);
+  input.value = "";
+};
+
+const displayShow = (request) => {
+  const tempReq = request.slice(0, 3);
+  const showInfo = tempReq
+    .map(function (item) {
+      const { image, name } = item.show;
+      const cardImg = image
+        ? image.medium
+        : "https://www.westernheights.k12.ok.us/wp-content/uploads/2020/01/No-Photo-Available.jpg";
+      return `<div class="card">
+    <div class="card-image">
+      <img
+        src="${cardImg}"
+        alt=""
+      />
+    </div>
+    <h2>${name}</h2>
+  </div>`;
+    })
+    .join("");
+  showContainer.innerHTML = showInfo;
+};
