@@ -42,7 +42,7 @@ for (let link of navLinks) {
       position = position - navHeight;
     }
 
-    if (containerHeight > 58) {
+    if (containerHeight > 70) {
       position = position + containerHeight;
     }
     window.scrollTo({

@@ -280,6 +280,9 @@ article {
 /* ************** END OF ARTICLES *************** */
 
 /* ************** SEARCH *************** */
+#search {
+  min-height: 80vh;
+}
 .input-wrapper {
   display: flex;
   width: 70%;
