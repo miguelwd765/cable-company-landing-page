@@ -96,3 +96,14 @@ const displayShow = (request) => {
     .join("");
   showContainer.innerHTML = showInfo;
 };
+
+const articleLinks = document.querySelectorAll(".article-link");
+
+for (let link of articleLinks) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+  });
+}
+
+const date = document.querySelector(".date");
+date.innerHTML = new Date().getFullYear();
