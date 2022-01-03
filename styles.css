@@ -283,6 +283,14 @@ article {
 #search {
   min-height: 100vh;
 }
+
+.show-header {
+  margin-bottom: 1.25rem;
+}
+
+.show-header h2 {
+  font-size: 3rem;
+}
 .input-wrapper {
   display: flex;
   width: 70%;
