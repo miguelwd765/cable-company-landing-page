@@ -346,4 +346,20 @@ article {
 .card-image img {
   border-radius: 2px;
 }
+
+@media screen and (min-width: 800px) {
+  #search {
+    min-height: 80vh;
+  }
+  .article-container-show {
+    display: block;
+  }
+  .show-container {
+    flex-direction: row;
+  }
+  .card {
+    max-width: 375px;
+    margin: 0 1rem;
+  }
+}
 /* ************** END OF SEARCH *************** */
